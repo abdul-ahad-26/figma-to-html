@@ -1,0 +1,278 @@
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
+
+header {
+
+  background-color: #faf5f5;
+}
+
+header nav .links {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  list-style: none;
+  margin-left: 70px;
+  margin-right: 70px;
+  font-size: 20px;
+}
+
+header nav .link {
+  padding-inline: 15px;
+
+}
+
+footer {
+  background-color: #faf5f5;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+footer .icons {
+  display: flex;
+  gap: 20px;
+}
+
+footer .text {
+  display: flex;
+}
+
+.hero-section {
+  background-color: #FAF5F5;
+  height: 500px;
+}
+
+.container {
+  max-width: 1030px;
+  margin: auto;
+}
+
+.hero-section main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 400px;
+}
+
+.hero-section .text-container {
+  max-width: 497px;
+  height: 305px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 50%;
+}
+
+.hero-section .main-heading {
+  max-width: 490px;
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 61px;
+}
+
+.hero-section .resume-btn {
+  /* width: 205px;
+    height: 50px; */
+  background-color: #F98585;
+  color: #FFFFFF;
+  border: none;
+  font-size: 18px;
+  padding: 10px 20px;
+  line-height: 26.44px;
+  font-weight: 500;
+  width: fit-content;
+  cursor: pointer
+}
+
+.recent-post-section {
+  background-color: #f4e2e2;
+  height: 502px;
+}
+
+.recent-post-section .container {
+  padding: 30px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.recent-post-section .heading {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.recent-post-section .view-all-button {
+  font-weight: 500;
+  font-size: 22px;
+  color: #F98585;
+  cursor: pointer;
+}
+
+.recent-post-section .recent-post {
+  font-weight: 500;
+  font-size: 22px;
+  color: #000000;
+}
+
+.recent-post-section .card-parent {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.recent-post-section .card-heading {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 38px;
+  letter-spacing: 0.02em;
+}
+
+
+
+.recent-post-section .card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 500px;
+  height: 356px;
+  padding: 40px 45px;
+  background-color: #ffffff;
+
+}
+
+.recent-post-section .date-text {
+  font-size: 18px;
+  line-height: 38px;
+  letter-spacing: 0.02em;
+  color: #4d4d4d;
+}
+
+.recent-post-section .description {
+  line-height: 23.5px;
+
+}
+
+.featured-works-section {
+  background-color: #faf5f5;
+}
+
+.featured-works-section .container {
+  padding: 75px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.featured-post-section .heading {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 32.31px;
+}
+
+.featured-works-section .featured-card-list{
+  display: flex;
+  flex-direction: column;
+  gap: 85px;
+}
+
+.featured-works-section .project-details {
+  display: flex;
+  gap: 30px;
+}
+
+.featured-works-section .text {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.featured-works-section h2{
+  font-size: 30px;
+  line-height: 44.06px;
+}
+
+.featured-works-section .heading {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 32.31px;
+}
+
+.featured-works-section .text{
+  width: 623.46px;
+
+}
+.featured-works-section .highlights {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.featured-works-section .year {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 26.44px;
+  color: #FFFFFF;
+  border-radius: 50px;
+  text-align: center;
+  background-color: #F98585;
+  width: 68px;
+  height: 24px;
+}
+
+.featured-works-section .project-name {
+  line-height: 29.38px;
+  font-size: 20px;
+  color: #0000009E;
+
+}
+
+.featured-works-section .description{
+  font-size: 18px;
+    font-weight: 300;
+    line-height: 26.44px;
+}
