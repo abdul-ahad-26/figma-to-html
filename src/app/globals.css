@@ -83,7 +83,7 @@ footer .text {
 
 .hero-section {
   background-color: #FAF5F5;
-  height: 500px;
+
 }
 
 .container {
@@ -95,12 +95,11 @@ footer .text {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 400px;
+  min-height: 500px;
+
 }
 
 .hero-section .text-container {
-  max-width: 497px;
-  height: 305px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -115,8 +114,8 @@ footer .text {
 }
 
 .hero-section .resume-btn {
-  /* width: 205px;
-    height: 50px; */
+  height: 50px;
+  width: 205px;
   background-color: #F98585;
   color: #FFFFFF;
   border: none;
@@ -124,13 +123,12 @@ footer .text {
   padding: 10px 20px;
   line-height: 26.44px;
   font-weight: 500;
-  width: fit-content;
-  cursor: pointer
+  cursor: pointer;
 }
 
 .recent-post-section {
   background-color: #f4e2e2;
-  height: 502px;
+  min-height: 502px;
 }
 
 .recent-post-section .container {
@@ -179,7 +177,7 @@ footer .text {
   flex-direction: column;
   gap: 20px;
   max-width: 500px;
-  height: 356px;
+  min-height: 356px;
   padding: 40px 45px;
   background-color: #ffffff;
 
@@ -214,7 +212,7 @@ footer .text {
   line-height: 32.31px;
 }
 
-.featured-works-section .featured-card-list{
+.featured-works-section .featured-card-list {
   display: flex;
   flex-direction: column;
   gap: 85px;
@@ -231,7 +229,7 @@ footer .text {
   gap: 12px;
 }
 
-.featured-works-section h2{
+.featured-works-section h2 {
   font-size: 30px;
   line-height: 44.06px;
 }
@@ -242,10 +240,11 @@ footer .text {
   line-height: 32.31px;
 }
 
-.featured-works-section .text{
-  width: 623.46px;
+.featured-works-section .text {
+  max-width: 623.46px;
 
 }
+
 .featured-works-section .highlights {
   display: flex;
   align-items: center;
@@ -271,8 +270,97 @@ footer .text {
 
 }
 
-.featured-works-section .description{
+.featured-works-section .description {
   font-size: 18px;
-    font-weight: 300;
-    line-height: 26.44px;
+  font-weight: 300;
+  line-height: 26.44px;
+}
+
+
+@media screen and (max-width:1024px) {
+  .container {
+    max-width: 800px;
+  }
+
+  .recent-post-section .card-parent {
+    gap: 16px;
+  }
+
+}
+
+@media screen and (max-width:768px) {
+  .container {
+    max-width: 700px;
+  }
+}
+
+@media screen and (max-width:425px) {
+  .hero-section main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+  }
+
+  .hero-section .text-container {
+    width: 80%;
+  }
+
+  .recent-post-section .card-parent {
+    flex-direction: column;
+  }
+
+  .container {
+    max-width: 380px;
+  }
+
+  .featured-works-section .project-details {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .featured-works-section .text {
+    align-items: center;
+  }
+
+  .featured-works-section .project-details {
+    align-items: center;
+    text-align: center;
+  }
+
+  .featured-works-section .container {
+    align-items: center;
+  }
+
+}
+
+@media screen and (max-width:375px) {
+  .container {
+    max-width: 350px;
+  }
+
+}
+
+@media screen and (max-width:325px) {
+  .container {
+    max-width: 300px;
+  }
+
+  .hero-section .main-heading {
+    font-size: 38px;
+  }
+
+  header nav .links {
+    justify-content: center;
+  }
+
+  .recent-post-section .card {
+    padding: 40px 20px;
+  }
+
+  .featured-works-section h2 {
+    font-size: 28px;
+  }
+
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 
-const FeaturedCard = (props:{imageLink:string}) => {
+const FeaturedCard = (props: { imageLink: string }) => {
   return (
     <>
 
