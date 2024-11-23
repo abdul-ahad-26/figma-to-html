@@ -303,7 +303,7 @@ footer .text {
   }
 
   .hero-section .text-container {
-    width: 80%;
+    width: 90%;
   }
 
   .recent-post-section .card-parent {
@@ -333,6 +333,10 @@ footer .text {
     align-items: center;
   }
 
+  .hero-section .main-heading {
+    font-size: 38px;
+  }
+
 }
 
 @media screen and (max-width:375px) {
@@ -347,9 +351,7 @@ footer .text {
     max-width: 300px;
   }
 
-  .hero-section .main-heading {
-    font-size: 38px;
-  }
+
 
   header nav .links {
     justify-content: center;
