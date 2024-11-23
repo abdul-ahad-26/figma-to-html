@@ -1,9 +1,10 @@
 import Link from "next/link";
-import {Inter} from "next/font/google";
 
-type FontType = ReturnType<typeof Inter>;
+interface HeaderProps{
+  font : {className :string};
+}
 
-export default function Header(data: {font: FontType}) {
+export default function Header(data:HeaderProps) {
   return (
     <>
       <header>
