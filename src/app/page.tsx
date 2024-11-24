@@ -15,7 +15,7 @@ export default function Home() {
               <button className="resume-btn">Download Resume</button>
             </div>
             <div>
-              <Image src="/person.png" width={298} height={308} alt="person" ></Image>
+              <Image  className="image" src="/person.png" width={298} height={308} alt="person" ></Image>
             </div>
           </main>
         </div>
