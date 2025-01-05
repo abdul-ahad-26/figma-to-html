@@ -1,80 +1,59 @@
-import { client } from "@/sanity/lib/client";
-import RecentPostSection from "./components/RecentPostSection";
-import FeaturedCardSection from "./components/FeaturedCardSection";
-import { MainData, PostData, WorkData } from "@/types";
-import HeroSection from "./components/HeroSection";
+import Image from "next/image";
+import Card from "@/app/components/Card"
+import FeaturedCard from "@/app/components/FeaturedCard";
 
-
-export default async function Home() {
-  const getData = async () => {
-    try {
-
-
-      return client.fetch<{
-        mainData: MainData[];
-        postData: PostData[];
-        workData: WorkData[];
-
-      }>(`
-      {
-      
-      "mainData":*[_type == "main"] {
-      _id,
-      title,
-      description,
-      image
-      
-    },
-     "postData":*[_type == "post1"] {
-      _id,
-      title,
-      date,
-      tags,
-      description    
-      },
-    "workData":*[_type == "work"] {
-     _id,
-      title,
-      year,
-      tags,
-      description,
-      image
-          }
-      }
-       
-      
-      `
-      )
-    } catch (error) {
-      console.error("Error fetching data", error);
-      return { mainData: [], postData: [], workData: [] }
-    }
-
-
-  }
-  const { mainData, postData, workData } = await getData()
-  // console.log("Postdata on home: ",postData)
-
+export default function Home() {
   return (
-    <main>
-      {/* Hero section */}
-      <HeroSection mainData={mainData?.[0]} />
+    <>
+      <section className="hero-section">
+        <div className="container">
+          <main >
+
+            <div className="text-container">
+              <h1 className="main-heading">Hi, I am John, Creative Technologist</h1>
+              <p className="main-para">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+              <button className="resume-btn">Download Resume</button>
+            </div>
+            <div>
+              <Image  className="image" src="/person.png" width={298} height={308} alt="person" ></Image>
+            </div>
+          </main>
+        </div>
+      </section>
+
+      <div className="recent-post-section">
+        <div className="container">
+          <div className="heading">
+            <h3 className="recent-post">Recent Post</h3>
+            <span className="view-all-button">View all</span>
+          </div>
+
+          <div className="card-parent">
+            <Card />
+            <Card />
 
 
-      {/* Recent Posts Section */}
-      <RecentPostSection postData={postData ?? []} />
+          </div>
 
-      {/* Featured Card Section */}
-      <FeaturedCardSection workData={workData ?? []} />
+        </div>
+      </div>
+
+      <section className="featured-works-section">
+        <div className="container">
+          <div className="heading">Featured works</div>
+
+          <div className="featured-card-list">
+            <FeaturedCard imageLink={'/project1.png'} />
+            <FeaturedCard imageLink={'/project2.png'} />
+            <FeaturedCard imageLink={'/project3.png'} />
+          </div>
+
+
+        </div>
+      </section>
 
 
 
-
-
-
-
-
-
-    </main>
+    </>
   );
 }

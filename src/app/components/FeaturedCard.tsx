@@ -1,28 +1,22 @@
 import React from 'react';
 import Image from 'next/image';
-import { urlFor } from '@/sanity/lib/image';
-import { WorkData } from '@/types';
 
-type FeaturedCardProps ={
-  work:WorkData;
-}
-
-const FeaturedCard = ({work}:FeaturedCardProps) => {
+const FeaturedCard = (props: { imageLink: string }) => {
   return (
+    <>
 
       <div className="project-details">
-        <Image alt={work.title} src={urlFor(work.image).url()} width={246} height={180} loading='lazy'/>
+        <Image src={props.imageLink} alt="project1" width={246} height={180}></Image>
         <div className="text">
-          <h2>{work.title}</h2>
+          <h2>Designing Dashboards</h2>
           <div className="highlights">
-            <div className="year">{work.year}</div>
-            <div className="tags">{work.tags.join(' , ')}</div>
+            <div className="year">2020</div>
+            <div className="project-name">Dashboard</div>
           </div>
-          <p className="description">{work.description}</p>
+          <p className="description">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
         </div>
-      </div>
-      
+      </div></>
   )
 }
 
-export default React.memo(FeaturedCard)
+export default FeaturedCard

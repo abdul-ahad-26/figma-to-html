@@ -10,9 +10,9 @@ export default function Header(data:HeaderProps) {
       <header>
         <nav className = {`${data.font.className}`}>
           <ul className="links">
-            <li className="link"><Link href="/works">Works</Link></li>
-            <li className="link"><Link href="/blog">Blog</Link></li>
-            <li className="link"><Link href="/contact">Contact</Link></li>
+            <li className="link"><Link href="">Works</Link></li>
+            <li className="link"><Link href="">Blog</Link></li>
+            <li className="link"><Link href="">Contact</Link></li>
           </ul>
         </nav>
       </header>

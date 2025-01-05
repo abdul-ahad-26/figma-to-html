@@ -60,12 +60,6 @@ header nav .links {
 header nav .link {
   padding-inline: 15px;
 
-  &:hover {
-    font-weight: 600;
-    
-  }
-  transition: hover , 300ms;
-
 }
 
 footer {
@@ -269,7 +263,7 @@ footer .text {
   height: 24px;
 }
 
-.featured-works-section .tags {
+.featured-works-section .project-name {
   line-height: 29.38px;
   font-size: 20px;
   color: #0000009E;

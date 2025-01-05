@@ -1,22 +1,16 @@
-import { PostData } from '@/types';
 import React from 'react'
 
-type CardProps = {
-    post: PostData;
-}
-
-const Card = ({ post }: CardProps) => {
-
+const Card = () => {
     return (
+        <>
+            <div className="card">
 
-        <div className="card">
+                <h2 className="card-heading">Making a design system from scratch</h2>
+                <p className="date-text">12 Feb 2020 | Design , Pattern</p>
+                <p className="description">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
 
-            <h2 className="card-heading">{post.title}</h2>
-            <p className="date-text">{post.date} | {post.tags.join(' , ')}</p>
-            <p className="description">{post.description}</p>
-
-        </div>
+            </div></>
     )
 }
 
-export default React.memo(Card)
+export default Card

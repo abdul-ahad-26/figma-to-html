@@ -5,7 +5,7 @@ import Footer from "@/app/components/Footer";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import { Heebo, Inter } from "next/font/google";
 
-const heebo = Heebo({ subsets: ["latin"], weight: ["300", "400", "500","600", "700", "900"] });
+const heebo = Heebo({ subsets: ["latin"], weight: ["300", "400", "500", "700", "900"] });
 const inter = Inter({ subsets: ["latin"], weight: ["400", "700"] });
 
 
