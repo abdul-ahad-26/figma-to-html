@@ -50,7 +50,7 @@ header nav .links {
   height: 100px;
   display: flex;
   align-items: center;
-  justify-content: end;
+  justify-content: flex-end;
   list-style: none;
   margin-left: 70px;
   margin-right: 70px;
@@ -59,6 +59,12 @@ header nav .links {
 
 header nav .link {
   padding-inline: 15px;
+
+  &:hover {
+    font-weight: 600;
+    
+  }
+  transition: hover , 300ms;
 
 }
 
@@ -263,7 +269,7 @@ footer .text {
   height: 24px;
 }
 
-.featured-works-section .project-name {
+.featured-works-section .tags {
   line-height: 29.38px;
   font-size: 20px;
   color: #0000009E;
